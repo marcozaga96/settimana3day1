@@ -20,9 +20,9 @@ class User {
 
   confronto = function (y) {
     if (this.age > y.age) {
-      console.log(this.firstName, "è più vecchio di", y.firstName);
+      return `${this.firstName} è piu vecchio di ${y.firstName} `;
     } else if (y.age > this.age) {
-      console.log(y.firstName, "è più vecchio di", this.firstName);
+      return `${y.firstName} è piu vecchio di ${this.firstName} `;
     }
   };
 }
@@ -34,4 +34,4 @@ const utente2 = new User("Aldo", "Baglio", 54, "Milano");
 console.log(utente2);
 console.log(utente2.greet());
 
-console.log(utente2.confronto(utente1));
+console.log(utente1.confronto(utente2));

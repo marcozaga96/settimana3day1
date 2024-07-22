@@ -5,10 +5,12 @@ class Pet {
     this.species = _species;
     this.breed = _breed;
   }
-  trueOrFalse = function (Pet) {
-    if (this.ownerName === Pet.ownerName) {
+  trueOrFalse = function (y) {
+    if (this.ownerName === y.ownerName) {
       return true;
-    } else return false;
+    } else {
+      return false;
+    }
   };
 }
 const animali = [];
@@ -34,9 +36,8 @@ document
         " " +
         animali[index].species +
         " " +
-        animali[index].breed +
-        " " +
-        animali[index].trueOrFalse(Pet);
+        animali[index].breed;
+
       newLi.classList.add("list-group-item");
       list.appendChild(newLi);
     }
